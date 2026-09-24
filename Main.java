@@ -29,7 +29,7 @@ public class Main {
                 System.out.println("***********************\n" +
                         "Nome:" + nome + "\n" +
                         "Tipo conta: Corrente\n" +
-                        "Saldo inicial:" + saldo + "\n" +
+                        "Saldo disponível em conta:" + saldo + "\n" +
                         "***********************\n" +
                         "\n" +
                         " Confirme 0 para voltar ao Inicio.\n");
@@ -41,8 +41,19 @@ public class Main {
                     deposito = leitura.nextDouble();
                     System.out.println("Digite SIM para confirmar o valor ou 0 para retornar: R$" + deposito);
                     resposta = leitura.next();
-
+                    saldo += deposito;
                 }
+                System.out.println("***********************\n" +
+                        "Nome:" + nome + "\n" +
+                        "Tipo conta: Corrente\n" +
+                        "Saldo disponível em conta:" + (saldo + deposito) + "\n" +
+                        "***********************\n" +
+                        "\n" +
+                        " Confirme 0 para voltar ao INÍCIO ou 4 para SAIR.\n");
+                numero = leitura.nextInt();
+
+            } else if (numero == 3) {
+                
             }
 
 
@@ -51,4 +62,3 @@ public class Main {
 
     }
 }
-
